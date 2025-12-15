@@ -1,0 +1,321 @@
+
+/* --- 1. Global Box Shadow and Overall Structure --- */
+
+.model-block {
+    /* RENDER: Apply Shadow to all boxes (as previously requested, and kept here) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: white; 
+    /* Add internal padding to the block for space around the elements */
+    padding: 15px;
+}
+
+
+/* This targets the container holding the model name to center the isolated h3 */
+.model-block > .video-container:first-child {
+    margin-bottom: 15px;
+    text-align: center; 
+    padding: 0;
+}
+
+
+/* --- 4. Video to Conclusion Gap --- */
+
+/* This targets the video container, ensuring it is full width */
+.model-block .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* This targets the conclusion block */
+.conclusion-item {
+    /* Gap 2: Video and Conclusion */
+    margin-top: 15px; /* Creates the required gap above the conclusion block */
+    /* Padding added for visual definition, assuming the conclusion block has a background color */
+    padding: 10px; 
+    border-radius: 8px;
+    /* Do not change color/font, which are controlled by other classes like .red-text */
+}
+
+/* The comparison-2x2-row now only manages the two columns */
+.comparison-2x2-row { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    align-items: start; 
+    margin-bottom: 20px; /* Space between the two rows of models */
+}
+
+/* New wrapper to hold the Header, Video, and Conclusion vertically */
+/*.model-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+*/
+/* Retain or ensure the base conclusion-item styling is present */
+.conclusion-item {
+    margin-top: 15px; 
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 80px; 
+    width: 100%; 
+    /* You might want a slightly stronger background color for contrast */
+    background-color: #f5f5f5; 
+}
+
+/* Ensure 'ours' styling applies correctly to the wrapper for highlighting */
+/*.model-block.ours .video-container.ours {
+    box-shadow: 0 4px 12px rgba(63, 168, 207, 0.4); 
+}*/
+
+.model-block .conclusion-item p {
+    /* Set a larger font size, e.g., 18px (adjust as needed) */
+    font-size: 18px !important; 
+    line-height: 1.4; 
+    margin: 0;
+}
+
+
+.conclusion-item.red-text,
+.conclusion-item.orange-text,
+.conclusion-item.green-text-dark,
+.conclusion-item.blue-text {
+    /* Increase font weight for better emphasis */
+    font-size: 18px !important; 
+    font-weight: 500; 
+}
+
+
+.model-name.red {
+    color: #E74C3C !important;
+/*    margin-bottom: 10px !important;*/
+}
+.model-name.orange {
+    color: #E67E22 !important;
+/*    margin-bottom: 10px !important;*/
+}
+.model-name.green {
+    color: #1D8348 !important;
+/*    margin-bottom: 10px !important;*/
+}
+.model-name.blue {
+    color: #3FA8CF !important;
+/*    margin-bottom: 10px !important;*/
+}
+
+/* Color definitions using the updated darker green */
+.red-text { color: #E74C3C !important; } /* MARDM */
+.orange-text { color: #E67E22 !important; } /* ACMDM */
+.green-text-dark { color: #1D8348 !important; } /* MotionStreamer (Darker Green) */
+.blue-text { color: #3FA8CF !important; } /* MoLingo (Ours) */
+/*.blue { 
+    color: #3FA8CF; 
+    background-color: rgba(63, 168, 207, 0.1); 
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+*/
+
+/* --- General Layout & Reset --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Subtle background for the page */
+}
+
+/* --- Overall Component Container --- */
+.video-comparison {
+    max-width: 1200px; 
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background for the main block */
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+}
+
+/* --- Description Row (The Prompt Header) --- */
+.description-row {
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 3px solid #ddd; 
+    background-color: #eef; /* Light blue background to highlight the prompt */
+    border-radius: 8px;
+}
+
+.description-text {
+    font-size: 1.3em; 
+    font-weight: 700; 
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* --- Grid Layout (For 4-Column Comparisons) --- */
+.header-row,
+.video-row,
+.conclusion-row { 
+    display: grid;
+    /* Default is 4 columns for baselines comparison */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    align-items: start; 
+}
+
+/* --- Ablation Layout (For 2-Column Ablations) --- */
+.ablation-comparison {
+    /* Add top margin between comparison sections */
+    margin-top: 60px; 
+}
+
+.ablation-row {
+    /* Override to 2 columns for ablation studies */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Separation */
+.header-row {
+    margin-bottom: 10px;
+}
+.video-row {
+    margin-bottom: 20px;
+}
+.conclusion-row {
+    margin-top: 20px;
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+}
+
+
+/* --- Model Name Styling (Header Row) --- */
+.model-name {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Highlighting 'Ours' (or the winning ablation) with a soft background */
+.video-container.ours .model-name { 
+    background-color: rgba(63, 168, 207, 0.15); 
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+
+/* --- Video Container Styling --- */
+.video-container {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Conclusion Item Styling --- */
+.conclusion-item {
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 80px; 
+    display: flex; 
+    align-items: center;
+}
+
+.conclusion-item p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Styling the conclusion items based on outcome */
+.conclusion-item:not(.ours) {
+    background-color: #fcecec; /* Light warning/fail background (Red tone) */
+    border: 1px solid #E74C3C;
+    color: #333;
+}
+
+.conclusion-item.ours {
+    background-color: #e8f9e8; /* Success background (Green tone) */
+    border: 1px solid #1D8348; /* Darker green border */
+    color: #333;
+}
+
+
+/* --- INTRO/METHODOLOGY SECTION STYLES (Bulma dependent, but styled by classes) --- */
+.comparison-intro {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #ffffff; 
+    border-bottom: 2px solid #eaeaea; 
+}
+.comparison-title {
+    margin-bottom: 30px !important;
+    font-weight: 700;
+}
+.technical-details {
+    padding: 30px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8; 
+    border-left: 5px solid #3FA8CF; 
+}
+.comparison-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.comparison-list li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.comparison-citations {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+}
+.comparison-citations p {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 900px) {
+    .header-row,
+    .video-row,
+    .conclusion-row {
+        /* On smaller screens, stack them in 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    /* Ensure ablations remain 2 columns if screen is small */
+    .ablation-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 500px) {
+        .header-row,
+        .video-row,
+        .conclusion-row {
+            /* On tiny screens, stack them in 1 column */
+            grid-template-columns: 1fr;
+        }
+        /* Ablations should also stack on tiny screens */
+        .ablation-row {
+            grid-template-columns: 1fr;
+        }
+    }
+}
