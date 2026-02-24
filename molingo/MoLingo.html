@@ -900,7 +900,7 @@ mjx-c.mjx-c1D45C.TEX-I::before {
 
     <p class="has-text-centered">
       <b>Left: Semantically aligned autoencoder architecture.</b>, The model comprises an encoder–decoder autoencoder for motion sequences and a parallel text-encoding branch that maps frame-level text labels into class tokens. A cosine-similarity loss is applied to align the motion latents with their corresponding class tokens.
-      <b>Right: Auto-regressive flow-based latent denoising.</b> ur generation model uses a standard transformer decoder to obtain conditioning vectors, which guides an MLP in iteratively refining latents. During training the motion latents are randomly masked and replaced with learnable tokens. During inference, we initialize with fully masked latents, iteratively denoise them, and decode the final latents to obtain the generated motion.
+      <b>Right: Auto-regressive flow-based latent denoising.</b> Our generation model uses a standard transformer decoder to obtain conditioning vectors, which guides an MLP in iteratively refining latents. During training the motion latents are randomly masked and replaced with learnable tokens. During inference, we initialize with fully masked latents, iteratively denoise them, and decode the final latents to obtain the generated motion.
     </p>
   </div>
 </section>
