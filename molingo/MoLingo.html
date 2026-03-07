@@ -706,9 +706,8 @@ mjx-c.mjx-c1D45C.TEX-I::before {
     <div class="columns is-centered">
       <div class="column has-text-centered">
         <h1 class="title is-1 publication-title">MoLingo: Motion-Language Alignment for Text-to-Motion Generation</h1>
-
         <div class="is-size-5 publication-authors">
-          <b>CVPR 2026</b>
+          <h4 class="title is-4">CVPR 2026</h4>
         </div>
         <br>
 
@@ -723,7 +722,7 @@ mjx-c.mjx-c1D45C.TEX-I::before {
             <a href="https://virtualhumans.mpi-inf.mpg.de/people/Zhang.html" target="_blank">Xiaohan Zhang</a><sup>1,2,3</sup>&nbsp;
           </span>
           <span class="author-block">
-            <a href="https://www.linkedin.com/in/pankaj-bora-2045891b5/?originalSubdomain=de" target="_blank">Pankaj Bora</a><sup>1</sup>&nbsp;
+            <a href="https://www.linkedin.com/in/pankaj-bora-2045891b5/?originalSubdomain=de" target="_blank">Pankaj Bora</a><sup>1,5</sup>&nbsp;
           </span>
           <br>
           <span class="author-block">
@@ -739,10 +738,11 @@ mjx-c.mjx-c1D45C.TEX-I::before {
 
         <div class="is-size-5 publication-authors" style="margin-top: 10px;">
           <span class="author-block"><sup>1</sup>University of Tübingen,</span>
-          <span class="author-block"><sup>2</sup>Tübingen AI Center,</span>
-          <span class="author-block"><sup>3</sup>Max Planck Institute for Informatics, Saarland Informatics Campus,</span>
+          <span class="author-block"><sup>2</sup>Tübingen AI Center</span>
+          <span class="author-block"><sup>3</sup>Max Planck Institute for Informatics, Saarland Informatics Campus</span>
           <br>
-          <span class="author-block"><sup>4</sup>Imperial College London</span>
+          <span class="author-block"><sup>4</sup>Imperial College London, </span>
+          <span class="author-block"><sup>5</sup>Zuse School ELIZA</span>
         </div>
 
         <div class="column has-text-centered">
@@ -756,23 +756,6 @@ mjx-c.mjx-c1D45C.TEX-I::before {
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2403.03122" class="external-link button is-normal is-rounded is-dark" target="_blank">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-               <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=4oc5h0EGI3o&amp;lc=UgyuM5qI2qBecYfxBPR4AaABAg" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg><
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>  -->
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/hynann/MoLingo" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -781,86 +764,71 @@ mjx-c.mjx-c1D45C.TEX-I::before {
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-<!--               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
-            </div>
-
-          </div>
-      </div>
-    </div>
   </div>
 </section>
 
 
-<section class="section" style="background-color: white;">
+<section class="section" style="background-color: white; padding-top: 1rem; padding-bottom: 2rem;">
   <div class="container is-max-desktop">
-    <center>
-      <h2 class="title is-3">Result Gallery</h2>
-    </center>
-    
-    <div style="
-        display: flex; 
-        justify-content: center; 
-        /* Set max-width to match video max-width for alignment */
-        max-width: 1280px; 
-        /* Center the caption block */
-        margin: 15px auto auto auto; 
-        font-weight: bold; 
-        font-size: 1.1em;">
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        max-width: 1280px;
+        margin: 0 auto 12px auto;
+        font-weight: bold;
+        font-size: 1.1em;
+      "
+    >
       <span style="flex-basis: 50%; text-align: right; padding-right: 10%;">generated motion</span>
       <span style="flex-basis: 50%; text-align: left; padding-left: 18%;">G1 tracking result</span>
     </div>
+
     <div id="results-carousel" class="carousel results-carousel">
-        <div class="item has-text-centered">
-        <video class="result-video" autoplay muted playsinline loop controls style="width:100%;max-width:1280px;">
+      <div class="item has-text-centered">
+        <video class="result-video" autoplay muted playsinline loop controls style="width: 100%; max-width: 1280px;">
           <source src="./gallery/output_49.mp4" type="video/mp4">
         </video>
-        <center>
+        <div style="text-align: center;">
           <span style="font-size: 18pt;">
             <em>"A person lifts each knee towards the opposite elbow."</em>
           </span>
-        </center>
+        </div>
       </div>
+
       <div class="item has-text-centered">
-        <video class="result-video" autoplay muted playsinline loop controls style="width:100%;max-width:1280px;">
+        <video class="result-video" autoplay muted playsinline loop controls style="width: 100%; max-width: 1280px;">
           <source src="./gallery/output_41.mp4" type="video/mp4">
         </video>
-        <center>
+        <div style="text-align: center;">
           <span style="font-size: 18pt;">
             <em>"The person does a box step waltz backwards."</em>
           </span>
-        </center>
+        </div>
       </div>
-      
+
       <div class="item has-text-centered">
-        <video class="result-video" autoplay muted playsinline loop controls style="width:100%;max-width:1280px;">
+        <video class="result-video" autoplay muted playsinline loop controls style="width: 100%; max-width: 1280px;">
           <source src="./gallery/output_56.mp4" type="video/mp4">
         </video>
-        <center>
+        <div style="text-align: center;">
           <span style="font-size: 18pt;">
             <em>"A person is scrubbing a window."</em>
           </span>
-        </center>
+        </div>
       </div>
+
       <div class="item has-text-centered">
-        <video class="result-video" autoplay muted playsinline loop controls style="width:100%;max-width:1280px;">
+        <video class="result-video" autoplay muted playsinline loop controls style="width: 100%; max-width: 1280px;">
           <source src="./gallery/output_72.mp4" type="video/mp4">
         </video>
-        <center>
+        <div style="text-align: center;">
           <span style="font-size: 18pt;">
             <em>"A person appears to be playing the violin."</em>
           </span>
-        </center>
+        </div>
       </div>
     </div>
-    <!-- <span style="font-size:12px">* Motion clips are temporally continuous.</span> -->
   </div>
 </section>
 
@@ -868,7 +836,11 @@ mjx-c.mjx-c1D45C.TEX-I::before {
 <script>
   bulmaCarousel.attach('#results-carousel', {
     slidesToScroll: 1,
-    slidesToShow: 1
+    slidesToShow: 1,
+    loop: true,
+    infinite: true,
+    navigation: true,
+    pagination: true
   });
 </script>
 
@@ -888,7 +860,7 @@ mjx-c.mjx-c1D45C.TEX-I::before {
 
 <section class="section teaser" style="background-color: white;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method</h2>
+    <h2 class="title is-3 has-text-centered">Method Overview</h2>
 
     <div style="max-height:1280px; display:flex; justify-content:center;">
       <img
@@ -1625,22 +1597,19 @@ mjx-c.mjx-c1D45C.TEX-I::before {
 
         </div>
               </center> <br> <br>
-We thank Chuqiao Li and István Sárándi for their helpful discussions and proofreading. We also thank Junyu Zhang for valuable discussions regarding the G1 policy training. The project was made possible by funding from the Carl Zeiss Foundation. This work is supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - 409792180 (Emmy Noether Programme, project:  Real Virtual Humans) and the German Federal Ministry of Education and Research (BMBF): Tübingen AI Center, FKZ: 01IS18039A. JEL is supported by the German Research Foundation (DFG) - 556415750 (Emmy Noether Programme, project: Spatial Modeling and Reasoning). GPM is a member of the Machine Learning Cluster of Excellence, EXC number 2064/1 - Project number 390727645. This work was supported by the Engineering and Physical Sciences Research Council [grant number EP/X011364/1]. T. B. was supported by a UKRI Future Leaders Fellowship (MR/Y018818/1) as well as a Royal Society Research Grant (RG/R1/241402). 
+We thank Chuqiao Li and István Sárándi for their helpful discussions and proofreading. We also thank Junyu Zhang for valuable discussions regarding the G1 policy training. The project was made possible by funding from the Carl Zeiss Foundation. This work is supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - 409792180 (Emmy Noether Programme, project:  Real Virtual Humans) and the German Federal Ministry of Education and Research (BMBF): Tübingen AI Center, FKZ: 01IS18039A. JEL is supported by the German Research Foundation (DFG) - 556415750 (Emmy Noether Programme, project: Spatial Modeling and Reasoning). GPM is a member of the Machine Learning Cluster of Excellence, EXC number 2064/1 - Project number 390727645. This work was supported by the Engineering and Physical Sciences Research Council [grant number EP/X011364/1]. P. B. is supported by the Konrad Zuse School of Excellence in Learning and Intelligent Systems (ELIZA) through the DAAD programme Konrad Zuse Schools of Excellence in Artificial Intelligence, sponsored by the Federal Ministry of Education and Research. T. B. was supported by a UKRI Future Leaders Fellowship (MR/Y018818/1) as well as a Royal Society Research Grant (RG/R1/241402). 
     </div>
     <!--/ Acknowledgments. -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{he2025molingo,
-      title={MoLingo: Motion-Language Alignment for Text-to-Motion Generation}, 
-      author={Yannan He and Garvita Tiwari and Xiaohan Zhang and Pankaj Bora and Tolga Birdal and Jan Eric Lenssen and Gerard Pons-Moll},
-      year={2025},
-      eprint={2512.13840},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2512.13840}, 
-}</code></pre>
+    <pre><code>@inproceedings{he2026molingo,
+      title={MoLingo: Motion–Language Alignment for Text-to-Human Motion Generation},
+      author={He, Yannan and Tiwari, Garvita and Zhang, Xiaohan and Bora, Pankaj and Birdal, Tolga and Lenssen, Jan Eric and Pons-Moll, Gerard},
+      booktitle={CVPR},
+      year={2026}
+  }</code></pre>
   </div>
 </section>
 
